@@ -49,8 +49,9 @@
 		return FALSE
 //	if(!user.can_read(src))
 //		return FALSE
-	if(already_known(user))
-		return FALSE
+	if(HAS_TRAIT(user, required_learn_trait))
+		if(already_known(user))
+			return FALSE
 //	if(!user.can_read(src))
 //		return FALSE
 	if(user.STAINT < 8)
